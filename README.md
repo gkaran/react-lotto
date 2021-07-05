@@ -1,6 +1,23 @@
-# Getting Started with Create React App
+# Lotto Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a very small Lotto game demonstration using React, Mobx and TailwindCSS.
+
+The player starts of with 3 tabs and can add up to 3 additional ones. There are buttons on the bottom left of the board
+allowing the user to:
+
+* Clear current tab
+* Clear all tabs
+* Quick select current tab
+* Quick select all tabs
+* Reset the game to the default state
+
+For each tab, the player can pick the system they want to use and the numbers of their choice (from 1 up to 49). If the selected numbers don't match the selected system a corresponding error will be shown. Additionally an indicator next to the tab index will be shown which has three states:
+
+* White border, no fill, when the tab is selected and no numbers have been selected
+* Red, when the given tab has an error (visible any time)
+* Green, when the given tab is valid (visible any time)
+
+In the bottom right corner we see the current board's price and the total price as well as a "play all" button. The later is enabled only when all tabs are valid. For the purposes of this game, a tab is considered to be valid when either no numbers have been selected (in which case it would be ignored) or when the selected numbers match the selected system for the tab.
 
 ## Available Scripts
 
@@ -18,53 +35,3 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
