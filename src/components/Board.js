@@ -22,7 +22,7 @@ const Board = observer(({ game }) => {
                 {game.canAddMoreTabs && <button className='py-2 px-8' onClick={onNewTabClick}><span className='text-white'>&#10753;</span></button>}
             </div>
 
-            <div className="bg-gray-800 p-4 rounded-r-lg">
+            <div className={`bg-gray-800 p-4 rounded-r-lg ${game.selectedTab.index > 1 ? 'rounded-tl-lg' : ''}`}>
                 <BoardNumbers tab={game.selectedTab} />
                 <System tab={game.selectedTab} />
             </div>
