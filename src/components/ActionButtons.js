@@ -1,4 +1,5 @@
 import { observer } from "mobx-react-lite";
+import ActionButton from "./ActionButton";
 
 const ActionButtons = observer(({game}) => {
     const onTabClear = () => game.selectedTab.clear();
@@ -8,11 +9,11 @@ const ActionButtons = observer(({game}) => {
     const onGameReset = () => game.reset();
 
     return (<>
-        <button className='border-white text-white border-2 rounded-lg p-2 text-lg mr-2' onClick={onTabClear}>CLR</button>
-        <button className='border-white text-white border-2 rounded-lg p-2 text-lg mr-2' onClick={onGameClear}>CLR ALL</button>
-        <button className='border-white text-white border-2 rounded-lg p-2 text-lg mr-2' onClick={onTabQuickPick}>QS</button>
-        <button className='border-white text-white border-2 rounded-lg p-2 text-lg mr-2' onClick={onGameQuickPick}>QS ALL</button>
-        <button className='border-white text-white border-2 rounded-lg p-2 text-lg' onClick={onGameReset}>R</button>
+        <ActionButton text='CLR' onClick={onTabClear} />
+        <ActionButton text='CLR ALL' onClick={onGameClear} />
+        <ActionButton text='QS' onClick={onTabQuickPick} />
+        <ActionButton text='QS ALL' onClick={onGameQuickPick} />
+        <ActionButton text='R' onClick={onGameReset} />
     </>);
 });
 
